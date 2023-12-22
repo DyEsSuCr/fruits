@@ -1,28 +1,30 @@
 import type { DiscoverItem } from '@/interface/interfaces'
 
+const link = 'javascript:void(0)'
+
 export const discoverItem: DiscoverItem[] = [
   {
     name: 'Home',
-    link: 'javascript:void(0)'
+    link
   },
   {
     name: 'Frutas',
-    link: 'javascript:void(0)'
+    link
   },
   {
     name: 'Recetas',
-    link: 'javascript:void(0)'
+    link
   },
   {
     name: 'Cultivo Responsable',
-    link: 'javascript:void(0)'
+    link
   },
   {
     name: 'Donde comprar',
-    link: 'javascript:void(0)'
+    link
   },
   {
     name: 'Newsletter',
-    link: 'javascript:void(0)'
+    link
   }
 ]

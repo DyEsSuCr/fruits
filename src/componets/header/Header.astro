@@ -1,3 +1,14 @@
-<header>
-  <h1>Header</h1>
-</header>
+---
+import { headerItem } from '@/const/header.items'
+---
+
+<header class="flex justify-between max-w-[90%] m-auto">
+  <h1>Logo</h1>
+  <nav>
+    {
+      headerItem.map((item) => (
+        <a href={item.link}>{item.name}</a>
+      ))
+    }
+  </nav>
+</hea>

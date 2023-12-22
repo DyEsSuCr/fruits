@@ -1,0 +1,11 @@
+---
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+---
+
+<button class="bg-green text-white py-4 px-14 rounded-full hover:bg-black duration-300 max-w-max">
+  {text}
+</button>

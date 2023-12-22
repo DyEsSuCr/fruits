@@ -1,5 +1,73 @@
 ---
 import Layout from '@/layouts/Layout.astro'
+import Card from '@/componets/Card.astro'
+import Buttom from '@/componets/Buttom.astro';
+import Row from '@/icons/Row.astro'
+
+import { fruitsItems } from '@/const/fruits.items'
 ---
 
-<Layout title='home'/>
+<Layout title='home'>
+  <section class="bg-dark-white rounded-br-[200px]">
+    <div class="m-auto max-w-[81.25rem] flex flex-col items-center py-16">
+      <h3 class="text-5xl font-bold">Conoce más</h3>
+      <div class="w-full grid grid-cols-cards justify-center gap-10 my-12 mb-16">
+        {
+          fruitsItems.slice(0, 6).map((item) => (
+            <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText="Ver ficha tecnica" />
+          ))
+        }
+      </div>
+
+      <Buttom text="Ver más" />
+    <div/>
+  </section>
+
+  <div class="max-w-[81.25rem] m-auto">
+    <section class="bg-[url(/big-banana.png)] bg-no-repeat bg-cover flex justify-end py-14 px-20 rounded-[35px] overflow-hidden text-white text-center lg:text-end my-16 relative before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-sepia">
+      <div class="flex flex-col gap-8 w-full lg:w-1/2 relative items-center lg:items-end">
+        <h3 class="font-bold text-4xl">Buenas practicas</h3>
+        <p>
+          Estas políticas se centran en proteger la salud de los consumidores, el bienestar de los animales, la sostenibilidad ambiental y la seguridad alimentaria.
+        </p>
+        <Buttom text='Ver más' />
+      </div>
+    </section>
+
+    <section>
+      <div class="flex justify-between mb-20">
+        <h3 class="text-5xl font-bold">Recetas</h3>
+        <nav class="text-green">
+          <button>
+            <Row />
+          </button>
+          <button class="rotate-180">
+            <Row />
+          </button>
+        </nav>
+      </div>
+      <div class="grid grid-cols-cards justify-center gap-10">
+        {
+          fruitsItems.slice(0, 3).map((item) => (
+            <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' />
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="my-24 shadow-lg py-8 px-4 md:py-32 md:px-24 bg-[url(/fruits.png)] bg-no-repeat bg-right bg-cover">
+      <div class="w-full lg:w-1/2 flex flex-col gap-16 text-center lg:text-start lg:max-w-[464px]">
+        <h3 class="text-green text-[10vw] md:text-6xl">
+          ¡Descubre el sabor natural!
+        </h3>
+        <p>
+          Platos deliciosos, noticias frescas y consejos útiles. Suscríbete para recibir contenido de calidad. ¡Únete y descubre el sabor natural!
+        </p>
+        <form class="flex flex-col md:flex-row items-center">
+          <input type="email">
+          <Buttom text="enviar" />
+        </form>
+      </div>
+    </section>
+  </div>
+</Layout>
