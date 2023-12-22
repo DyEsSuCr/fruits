@@ -1,14 +1,16 @@
 ---
 import { headerItem } from '@/const/header.items'
+import Button from '@/componets/Buttom.astro'
 ---
 
-<header class="flex justify-between max-w-[90%] m-auto">
+<header class="flex justify-between absolute items-center w-full max-w-[1800px] m-auto mb-7 mt-7 right-0 left-0 text-white">
   <h1>Logo</h1>
-  <nav>
+  <nav class="flex gap-16 items-center">
     {
       headerItem.map((item) => (
         <a href={item.link}>{item.name}</a>
       ))
     }
+    <Button text='Suscribete ahora' />
   </nav>
 </hea>

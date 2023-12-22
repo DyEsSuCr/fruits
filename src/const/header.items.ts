@@ -18,9 +18,5 @@ export const headerItem: DiscoverItem[] = [
   {
     name: 'Donde comprar',
     link
-  },
-  {
-    name: 'Sucribete ahora',
-    link
   }
 ]
