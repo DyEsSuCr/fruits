@@ -1,0 +1,17 @@
+---
+import { discoverItem } from '../../const/const'
+---
+
+<div class="flex flex-col">
+  <h4>Descubre</h4>
+  <ul>
+    {
+      discoverItem.map((item) => (
+        <li>
+          <a href={item.link}>{item.name}</a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+ 
