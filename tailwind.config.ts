@@ -10,6 +10,7 @@ export default {
       'dark-white': '#FBFBF8',
       'dark-gray': '#3F3F3F',
       'light-gray': '#75797F',
+      'light-gray-2': '#B6B6B6',
       sepia: 'rgba(0, 0, 0, .2)'
     },
     extend: {

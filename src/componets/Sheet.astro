@@ -1,0 +1,20 @@
+---
+import Icon from "@/icons/Icon.astro";
+import Title from "./Title.astro";
+
+interface Props {
+  title: string
+  text: string
+  className?: string
+}
+
+const { title, text, className } = Astro.props
+---
+
+<div class=`flex flex-col text-center py-4 ${className}`>
+  <Icon>
+    <slot />
+  </Icon>
+  <Title type='h3' font='bold' text={title} className='text-xl pt-4' />
+  <p>{text}</p>
+</div>

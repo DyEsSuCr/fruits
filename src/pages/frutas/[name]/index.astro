@@ -1,0 +1,41 @@
+---
+import Layout from '@/layouts/Layout.astro'
+import Title from '@/componets/Title.astro'
+import Agriculture from '@/icons/Agriculture.astro'
+import Compass from '@/icons/Compass.astro'
+import Plat from '@/icons/Plant.astro'
+import Sheet from '@/componets/Sheet.astro'
+
+const { name } = Astro.params
+
+---
+
+<Layout title={String(name)}>
+  <section class="grid grid-cols-3 mx-auto max-w-[81.25rem] pt-[112px]">
+    <Title type='h2' font='bold' text='Ficha tecnica' className='text-5xl col-span-3 text-center pt-16' />
+
+    <div class="col-span-3 grid-cols-1 gap-7 lg:gap-0 grid lg:grid-cols-[1fr_2fr_1fr] pt-20 pb-24">
+      <Sheet text='Rosaceae' title='Familia Botanica'>
+        <Plat />
+      </Sheet>
+
+      <Sheet text='Asia Central' title='Origen' className='border-y-2 lg:border-y-0 lg:border-x-2 border-light-gray-2'>
+        <Compass />
+      </Sheet>
+
+      <Sheet text='Las manzanas rojas suelen ser cosechadas en otoño' title='Cosecha'>
+        <Agriculture />
+      </Sheet>
+    </div>
+
+    <div class="col-span-3 grid grid-cols-2 pb-16">
+      <figure>
+        <img src="/manzana.png">
+      </figure>
+      
+      <div>
+        <Title type='h3' font='bold' text='Manzana roja' className='text-5xl' />
+      </div>
+    </div>
+  </section>
+</Layout>
