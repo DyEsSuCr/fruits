@@ -1,0 +1,21 @@
+---
+import Title from "./Title.astro"
+
+type justify = "center" | "between"
+
+interface Props {
+  title: string
+  justify: justify
+}
+
+const { title, justify } = Astro.props
+---
+
+<section class="max-container flex flex-col items-center py-16 px-4 md:px-0">
+  <div class=`flex justify-${justify} items-center w-full`>
+    <Title type='h3' font='bold' text={title} className='[font-size:_clamp(2em,10vw,2.813em)]' />
+    <slot name="nav"/>
+  </div>
+
+  <slot/>
+</section>

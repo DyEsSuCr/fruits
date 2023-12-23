@@ -1,9 +1,17 @@
 ---
 import { headerItem } from '@/const/header.items'
 import Button from '@/componets/Buttom.astro'
+
+type color = 'white' | 'green'
+
+interface Props {
+  color?: string
+}
+
+const { color } = Astro.props
 ---
 
-<header class="flex justify-between absolute items-center w-full max-w-[1800px] m-auto mb-7 mt-7 right-0 left-0 text-white">
+<header class=`flex justify-between absolute items-center w-full max-w-[1800px] m-auto mb-7 mt-7 right-0 left-0 text-${color ? color : 'white'}`>
   <h1>
     <a href="/">Logo</a>
   </h1>
@@ -15,4 +23,4 @@ import Button from '@/componets/Buttom.astro'
     }
     <Button text='Suscribete ahora' />
   </nav>
-</hea>
+</header>

@@ -17,10 +17,10 @@ const { description, img, link, title, bottomText } = Astro.props
     <img class="w-full" src={img} alt={title}>
   </figure>
   <div class="flex flex-col p-8">
-    <Title type='h3' font='bold' text={title} className='text-2xl' />
-    <p class="pt-4 pb-6">{description}</p>
+    <Title type='h3' font='bold' text={title} className='[font-size:_clamp(1em,10vw,1.5em)]' />
+    <p class="pt-4 pb-6 [font-size:_clamp(.8em,10vw,1.125em]">{description}</p>
     <div class="flex justify-end">
-      <a href={link} class="text-green underline">{bottomText}</a>
+      <a href={link} class="text-green underline [font-size:_clamp(.8em,10vw,1.125em]">{bottomText}</a>
     </div>
   </div>
 </div>

@@ -1,9 +1,10 @@
 ---
 import Layout from '@/layouts/Layout.astro'
 import Card from '@/componets/Card.astro'
-import Buttom from '@/componets/Buttom.astro';
+import Buttom from '@/componets/Buttom.astro'
 import Row from '@/icons/Row.astro'
 import Title from '@/componets/Title.astro'
+import Section from '@/componets/Section.astro'
 
 import { fruitsItems } from '@/const/fruits.items'
 ---
@@ -18,9 +19,8 @@ import { fruitsItems } from '@/const/fruits.items'
     </div>
   </div>
 
-  <section class="bg-dark-white rounded-br-[200px]">
-    <div class="m-auto max-w-[81.25rem] flex flex-col items-center py-16">
-      <Title type='h3' font='bold' text='Conoce más' className='text-5xl' />
+  <div class="bg-dark-white rounded-br-[200px]">
+    <Section title='Conoce más' justify='center'>
       <div class="w-full grid grid-cols-cards justify-center gap-10 my-12 mb-16">
         {
           fruitsItems.slice(0, 6).map((item) => (
@@ -30,45 +30,43 @@ import { fruitsItems } from '@/const/fruits.items'
       </div>
 
       <Buttom text="Ver más" />
-    <div/>
-  </section>
+    </Section>
+  </div>
 
-  <div class="max-w-[81.25rem] m-auto">
+  <div class="max-w-[81.25rem] m-auto px-4 lg:px-0">
     <section class="bg-[url(/big-banana.png)] bg-no-repeat bg-cover flex justify-end py-14 px-20 rounded-[35px] overflow-hidden text-white text-center lg:text-end my-16 relative before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-sepia">
       <div class="flex flex-col gap-8 w-full lg:w-1/2 relative items-center lg:items-end">
-        <Title type='h3' font='bold' text='Buenas practicas' className='text-5xl' />
-        <p>
+        <Title type='h3' font='bold' text='Buenas practicas' className='[font-size:_clamp(1.5em,10vw,2rem)]' />
+        <p class="[font-size:_clamp(.8em,10vw,1.25em]">
           Estas políticas se centran en proteger la salud de los consumidores, el bienestar de los animales, la sostenibilidad ambiental y la seguridad alimentaria.
         </p>
         <Buttom text='Ver más' />
       </div>
     </section>
 
-    <section>
-      <div class="flex justify-between mb-20">
-        <Title type='h3' font='bold' text='Recetas' className='text-5xl' />
-        <nav class="text-green">
-          <button>
-            <Row />
-          </button>
-          <button class="rotate-180">
-            <Row />
-          </button>
-        </nav>
-      </div>
-      <div class="grid grid-cols-cards justify-center gap-10">
+    <Section title='Recetas' justify='between'>
+      <nav slot="nav" class="text-green">
+        <button>
+          <Row />
+        </button>
+        <button class="rotate-180">
+          <Row />
+        </button>
+      </nav>
+
+      <div class="w-full grid grid-cols-cards justify-center gap-10 pt-20">
         {
           fruitsItems.slice(0, 3).map((item) => (
             <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' />
           ))
         }
       </div>
-    </section>
+    </Section>
 
     <section class="my-24 shadow-xl py-8 px-4 md:py-32 md:px-24 bg-[url(/fruits.png)] bg-no-repeat bg-right bg-cover">
       <div class="w-full lg:w-1/2 flex flex-col gap-16 text-center lg:text-start lg:max-w-[464px]">
         <Title type='h3' font='bold' text='¡Descubre el sabor natural!' className='[font-size:_clamp(2.625em,10vw,3.75em)] text-green' />
-        <p>
+        <p class="[font-size:_clamp(.8em,10vw,1.25em]">
           Platos deliciosos, noticias frescas y consejos útiles. Suscríbete para recibir contenido de calidad. ¡Únete y descubre el sabor natural!
         </p>
         <form class="flex flex-col md:flex-row items-center text-">
