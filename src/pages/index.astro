@@ -9,9 +9,9 @@ import { fruitsItems } from '@/const/fruits.items'
 ---
 
 <Layout title='home'>
-  <div class="min-h-[calc(100dvh+112px)] bg-[url(/hero.png)] bg-no-repeat bg-cover text-white flex items-center pl-72">
-    <div class="lg:w-1/2 max-w-[690px]">
-      <Title type='h2' font='bold' text='Frutas y verduras' className='text-8xl mb-14' />
+  <div class="min-h-[calc(100dvh+112px)] bg-[url(/hero.png)] bg-no-repeat bg-cover text-white flex items-center px-4 md:pl-[10%]">
+    <div class="lg:w-1/2 max-w-[690px] w-full">
+      <Title type='h2' font='bold' text='Frutas y verduras' className='[font-size:_clamp(2.625em,10vw,6em)] mb-14 leading-[98%]' />
       <p class="text-2xl">
         ¡Bienvenidos a nuestra página web dedicada a los tesoros naturales de la tierra! Descubre la magia de las frutas y verduras frescas en un viaje lleno de sabores y beneficios para tu salud. Explora información sobre prácticas de cultivo responsable y calidad de la UE, despierta tu creatividad con nuestras inspiradoras recetas.
       </p>
@@ -67,11 +67,11 @@ import { fruitsItems } from '@/const/fruits.items'
 
     <section class="my-24 shadow-xl py-8 px-4 md:py-32 md:px-24 bg-[url(/fruits.png)] bg-no-repeat bg-right bg-cover">
       <div class="w-full lg:w-1/2 flex flex-col gap-16 text-center lg:text-start lg:max-w-[464px]">
-        <Title type='h3' font='bold' text='¡Descubre el sabor natural!' className='text-6xl text-green' />
+        <Title type='h3' font='bold' text='¡Descubre el sabor natural!' className='[font-size:_clamp(2.625em,10vw,3.75em)] text-green' />
         <p>
           Platos deliciosos, noticias frescas y consejos útiles. Suscríbete para recibir contenido de calidad. ¡Únete y descubre el sabor natural!
         </p>
-        <form class="flex flex-col md:flex-row items-center">
+        <form class="flex flex-col md:flex-row items-center text-">
           <input type="email">
           <Buttom text="enviar" />
         </form>
