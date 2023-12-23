@@ -5,7 +5,7 @@ const link = 'javascript:void(0)'
 export const headerItem: DiscoverItem[] = [
   {
     name: 'Frutas',
-    link
+    link: '/frutas'
   },
   {
     name: 'Recetas',
