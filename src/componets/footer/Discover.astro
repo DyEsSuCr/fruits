@@ -1,9 +1,10 @@
 ---
 import { discoverItem } from '../../const/discover.items'
+import Title from '../Title.astro';
 ---
 
-<div class="flex flex-col">
-  <h4>Descubre</h4>
+<div class="flex flex-col border-y-2 lg:border-y-0 lg:border-x-2 border-light-gray-2">
+  <Title type='h4' font='semibold' text='Descubre' className='text-3xl' />
   <ul>
     {
       discoverItem.map((item) => (

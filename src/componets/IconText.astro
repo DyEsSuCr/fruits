@@ -1,0 +1,13 @@
+---
+interface Props {
+  text: string
+}
+
+const { text } = Astro.props
+---
+
+<p class="flex items-center">
+  <slot name="after" />
+  {text}
+  <slot name="before" />
+</p>

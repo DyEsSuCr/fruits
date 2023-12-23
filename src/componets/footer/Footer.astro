@@ -4,10 +4,15 @@ import Discover from './Discover.astro'
 import About from './About.astro'
 ---
 
-<footer class="min-w-full max-h-max flex justify-center items-center py-24 border-green border-solid border-2">
-  <nav class="m-auto flex border-solid border-x-dark-gray border-2">
-    <About />
-    <Discover />
-    <Contact />
-  </nav>
-</footer>
+<footer>
+  <div class="max-w-[1800px] m-auto">
+    <nav class="grid grid-cols-[2fr_1fr_1fr] py-20">
+      <About />
+      <Discover />
+      <Contact />
+    </nav>
+    <span class="text-center block pt-11 pb-10 border-t-2 border-light-gray-2">
+      © Copyright 2023 Goula.All rights reserved.
+    </span>
+  </div>
+</foote>
