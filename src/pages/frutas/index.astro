@@ -1,5 +1,23 @@
 ---
+import Buttom from '@/componets/Buttom.astro';
+import Card from '@/componets/Card.astro';
+import { fruitsItems } from '@/const/fruits.items';
 import Layout from '@/layouts/Layout.astro'
 ---
 
-<Layout title='fruits'/>
+<Layout title='fruits'>
+  <section class="rounded-br-[200px] pt-[112px]">
+    <div class="m-auto max-w-[81.25rem] flex flex-col items-center py-16">
+      <h3 class="text-5xl font-bold">Frutas</h3>
+      <div class="w-full grid grid-cols-cards justify-center gap-10 my-12 mb-16">
+        {
+          fruitsItems.slice(6).map((item) => (
+            <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' />
+          ))
+        }
+      </div>
+
+      <Buttom text="Ver más" />
+    <div/>
+  </section>
+</Layout>

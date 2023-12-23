@@ -9,6 +9,10 @@ import apple from '@/images/apple.png?url'
 import blueberry from '@/images/blueberry.png?url'
 import watermelon from '@/images/watermelon.png?url'
 import raspberries from '@/images/raspberries.png?url'
+import orange from '@/images/orange.png?url'
+import peach from '@/images/peach.png?url'
+import strawberry from '@/images/strawberry.png?url'
+import grape from '@/images/grape.png?url'
 
 import type { Fruit } from '@/interface/interfaces'
 
@@ -90,6 +94,34 @@ export const fruitsItems: Fruit[] = [
   {
     img: raspberries,
     title: 'Raspberries',
+    description,
+    link,
+    bottomText
+  },
+  {
+    img: orange,
+    title: 'Orange',
+    description,
+    link,
+    bottomText
+  },
+  {
+    img: peach,
+    title: 'Peach',
+    description,
+    link,
+    bottomText
+  },
+  {
+    img: strawberry,
+    title: 'Strawberry',
+    description,
+    link,
+    bottomText
+  },
+  {
+    img: grape,
+    title: 'Grape',
     description,
     link,
     bottomText
