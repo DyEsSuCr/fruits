@@ -1,0 +1,19 @@
+---
+type title =  'h2' | 'h3' | 'h4' | 'h5' | 'h6'
+type font = 'normal' | 'bold'
+
+interface Props {
+  type: title
+  text: string
+  font: font
+  className?: string
+}
+
+const { type, text, font, className } = Astro.props
+---
+
+{type === 'h2' && <h2 class={`font-['Poppins'] font-${font} ${className}`}>{text}</h2>}
+{type === 'h3' && <h3 class={`font-['Poppins'] font-${font} ${className}`}>{text}</h3>}
+{type === 'h4' && <h4 class={`font-['Poppins'] font-${font} ${className}`}>{text}</h4>}
+{type === 'h5' && <h5 class={`font-['Poppins'] font-${font} ${className}`}>{text}</h5>}
+{type === 'h6' && <h6 class={`font-['Poppins'] font-${font} ${className}`}>{text}</h6>}

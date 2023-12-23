@@ -1,4 +1,6 @@
 ---
+import Title from '@/componets/Title.astro'
+  
 interface Props {
   img: string
   title: string
@@ -15,7 +17,7 @@ const { description, img, link, title, bottomText } = Astro.props
     <img class="w-full" src={img} alt={title}>
   </figure>
   <div class="flex flex-col p-8">
-    <h3 class="text-2xl font-bold">{title}</h3>
+    <Title type='h3' font='bold' text={title} className='text-2xl' />
     <p class="pt-4 pb-6">{description}</p>
     <div class="flex justify-end">
       <a href={link} class="text-green underline">{bottomText}</a>

@@ -3,6 +3,7 @@ import Layout from '@/layouts/Layout.astro'
 import Card from '@/componets/Card.astro'
 import Buttom from '@/componets/Buttom.astro';
 import Row from '@/icons/Row.astro'
+import Title from '@/componets/Title.astro'
 
 import { fruitsItems } from '@/const/fruits.items'
 ---
@@ -10,7 +11,7 @@ import { fruitsItems } from '@/const/fruits.items'
 <Layout title='home'>
   <div class="min-h-[calc(100dvh+112px)] bg-[url(/hero.png)] bg-no-repeat bg-cover text-white flex items-center pl-72">
     <div class="lg:w-1/2 max-w-[690px]">
-      <h2 class="text-8xl mb-14">Frutas y verduras</h2>
+      <Title type='h2' font='bold' text='Frutas y verduras' className='text-8xl mb-14' />
       <p class="text-2xl">
         ¡Bienvenidos a nuestra página web dedicada a los tesoros naturales de la tierra! Descubre la magia de las frutas y verduras frescas en un viaje lleno de sabores y beneficios para tu salud. Explora información sobre prácticas de cultivo responsable y calidad de la UE, despierta tu creatividad con nuestras inspiradoras recetas.
       </p>
@@ -19,7 +20,7 @@ import { fruitsItems } from '@/const/fruits.items'
 
   <section class="bg-dark-white rounded-br-[200px]">
     <div class="m-auto max-w-[81.25rem] flex flex-col items-center py-16">
-      <h3 class="text-5xl font-bold">Conoce más</h3>
+      <Title type='h3' font='bold' text='Conoce más' className='text-5xl' />
       <div class="w-full grid grid-cols-cards justify-center gap-10 my-12 mb-16">
         {
           fruitsItems.slice(0, 6).map((item) => (
@@ -35,7 +36,7 @@ import { fruitsItems } from '@/const/fruits.items'
   <div class="max-w-[81.25rem] m-auto">
     <section class="bg-[url(/big-banana.png)] bg-no-repeat bg-cover flex justify-end py-14 px-20 rounded-[35px] overflow-hidden text-white text-center lg:text-end my-16 relative before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-sepia">
       <div class="flex flex-col gap-8 w-full lg:w-1/2 relative items-center lg:items-end">
-        <h3 class="font-bold text-4xl">Buenas practicas</h3>
+        <Title type='h3' font='bold' text='Buenas practicas' className='text-5xl' />
         <p>
           Estas políticas se centran en proteger la salud de los consumidores, el bienestar de los animales, la sostenibilidad ambiental y la seguridad alimentaria.
         </p>
@@ -45,7 +46,7 @@ import { fruitsItems } from '@/const/fruits.items'
 
     <section>
       <div class="flex justify-between mb-20">
-        <h3 class="text-5xl font-bold">Recetas</h3>
+        <Title type='h3' font='bold' text='Recetas' className='text-5xl' />
         <nav class="text-green">
           <button>
             <Row />
@@ -66,9 +67,7 @@ import { fruitsItems } from '@/const/fruits.items'
 
     <section class="my-24 shadow-xl py-8 px-4 md:py-32 md:px-24 bg-[url(/fruits.png)] bg-no-repeat bg-right bg-cover">
       <div class="w-full lg:w-1/2 flex flex-col gap-16 text-center lg:text-start lg:max-w-[464px]">
-        <h3 class="text-green text-[10vw] md:text-6xl">
-          ¡Descubre el sabor natural!
-        </h3>
+        <Title type='h3' font='bold' text='¡Descubre el sabor natural!' className='text-6xl text-green' />
         <p>
           Platos deliciosos, noticias frescas y consejos útiles. Suscríbete para recibir contenido de calidad. ¡Únete y descubre el sabor natural!
         </p>
