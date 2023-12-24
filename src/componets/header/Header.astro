@@ -1,6 +1,7 @@
 ---
-import { headerItem } from '@/const/header.items'
 import Button from '@/componets/Buttom.astro'
+import Menu from '@/icons/Menu.astro'
+import { headerItem } from '@/const/header.items'
 
 type color = 'white' | 'green'
 
@@ -11,16 +12,21 @@ interface Props {
 const { color } = Astro.props
 ---
 
-<header class=`flex justify-between absolute items-center w-full max-w-[1800px] m-auto mb-7 mt-7 right-0 left-0 text-${color ? color : 'white'}`>
-  <h1>
-    <a href="/">Logo</a>
-  </h1>
-  <nav class="flex gap-16 items-center">
-    {
-      headerItem.map((item) => (
-        <a href={item.link}>{item.name}</a>
-      ))
-    }
-    <Button text='Suscribete ahora' />
-  </nav>
+<header class=`absolute max-w-[112.5rem] m-auto mb-7 mt-7 right-0 left-0 text-${color ? color : 'white'}`>
+  <div class="flex justify-between items-center w-full px-4">
+    <h1>
+      <a href="/" class="font-['Poppins'] font-bold">Logo</a>
+    </h1>
+    <nav class="gap-16 items-center hidden lg:flex">
+        {
+          headerItem.map((item) => (
+            <a href={item.link} class="hover:font-bold hover:underline">{item.name}</a>
+          ))
+        }
+      <Button text='Suscribete ahora' />
+    </nav>
+    <nav class="lg:hidden">
+      <Menu />
+    </nav>
+  </div>
 </header>
