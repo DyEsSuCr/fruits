@@ -1,0 +1,26 @@
+---
+import Row from "@/icons/Row.astro";
+import Section from "./Section.astro";
+import { foodItems } from "@/const/slider.items";
+import Card from "./Card.astro";
+
+---
+
+<Section title='Recetas' justify='between'>
+  <nav slot="nav" class="text-green">
+    <button>
+      <Row />
+    </button>
+    <button class="rotate-180">
+      <Row />
+    </button>
+  </nav>
+
+  <div class="w-full grid grid-cols-cards justify-center gap-10 pt-20">
+    {
+      foodItems.slice(0, 3).map((item) => (
+        <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' />
+      ))
+    }
+  </div>
+</Section>

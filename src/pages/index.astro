@@ -2,11 +2,10 @@
 import Layout from '@/layouts/Layout.astro'
 import Card from '@/componets/Card.astro'
 import Buttom from '@/componets/Buttom.astro'
-import Row from '@/icons/Row.astro'
 import Title from '@/componets/Title.astro'
 import Section from '@/componets/Section.astro'
+import Carousel from '@/componets/Carousel.astro'
 
-import { foodItems } from '@/const/slider.items'
 import { fruitsItems } from '@/const/fruits.items'
 ---
 
@@ -45,24 +44,7 @@ import { fruitsItems } from '@/const/fruits.items'
       </div>
     </section>
 
-    <Section title='Recetas' justify='between'>
-      <nav slot="nav" class="text-green">
-        <button>
-          <Row />
-        </button>
-        <button class="rotate-180">
-          <Row />
-        </button>
-      </nav>
-
-      <div class="w-full grid grid-cols-cards justify-center gap-10 pt-20">
-        {
-          foodItems.slice(0, 3).map((item) => (
-            <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' />
-          ))
-        }
-      </div>
-    </Section>
+    <Carousel />
 
     <section class="my-24 shadow-xl py-8 px-4 md:py-32 md:px-24 bg-[url(/fruits.png)] bg-no-repeat bg-right bg-cover">
       <div class="w-full lg:w-1/2 flex flex-col gap-16 text-center lg:text-start lg:max-w-[464px]">
