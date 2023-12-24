@@ -12,7 +12,7 @@ const { title, justify } = Astro.props
 ---
 
 <section class="max-container flex flex-col items-center py-16 px-4 md:px-0">
-  <div class=`flex justify-${justify} items-center w-full`>
+  <div class=`flex justify-${justify} flex-wrap items-center w-full`>
     <Title type='h3' font='bold' text={title} className='[font-size:_clamp(2em,10vw,2.813em)]' />
     <slot name="nav"/>
   </div>

@@ -1,11 +1,12 @@
 ---
 interface Props {
   text: string
+  className?: string
 }
 
-const { text } = Astro.props
+const { text, className } = Astro.props
 ---
 
-<button class="bg-green text-white py-4 px-14 rounded-full hover:bg-black duration-300 max-w-max">
+<button class=`bg-green text-white py-4 px-14 rounded-full hover:bg-black duration-300 max-w-max ${className}`>
   {text}
 </button>

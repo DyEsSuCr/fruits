@@ -34,8 +34,8 @@ import { fruitsItems } from '@/const/fruits.items'
     </Section>
   </div>
 
-  <div class="max-w-[81.25rem] m-auto px-4 lg:px-0">
-    <section class="bg-[url(/big-banana.png)] bg-no-repeat bg-cover flex justify-end py-14 px-20 rounded-[35px] overflow-hidden text-white text-center lg:text-end my-16 relative before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-sepia">
+  <div class="max-w-[81.25rem] m-auto px-4 xl:px-0">
+    <section class="bg-[url(/big-banana.png)] bg-no-repeat bg-cover bg-center flex justify-end py-14 px-20 rounded-[35px] overflow-hidden text-white text-center lg:text-end my-16 relative before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-sepia">
       <div class="flex flex-col gap-8 w-full lg:w-1/2 relative items-center lg:items-end">
         <Title type='h3' font='bold' text='Buenas practicas' className='[font-size:_clamp(1.5em,10vw,2rem)]' />
         <p class="[font-size:_clamp(.8em,10vw,1.25em]">
@@ -70,9 +70,11 @@ import { fruitsItems } from '@/const/fruits.items'
         <p class="[font-size:_clamp(.8em,10vw,1.25em]">
           Platos deliciosos, noticias frescas y consejos útiles. Suscríbete para recibir contenido de calidad. ¡Únete y descubre el sabor natural!
         </p>
-        <form class="flex flex-col md:flex-row items-center text-">
-          <input type="email" class="bg-light-gray-2 py-4 pl-8 pr-20 rounded-md opacity-10 shadow-lg">
-          <Buttom text="enviar" />
+        <form class="flex flex-col md:flex-row items-center text-green relative md:max-w-max gap-4 md:gap-0">
+          <input type="email" class="bg-light-gray-3 py-4 pl-8 pr-20 rounded-md shadow-lg w-[80%] sm:w-full placeholder:text-light-gray-2" placeholder="Escribe tu correo">
+          <div class="md:absolute top-0 -right-[6.25rem]">
+            <Buttom text="enviar" className='rounded-lg [font-size:_clamp(.8em,10vw,1.25em] py-3 px-9 font-bold' />
+          </div>
         </form>
       </div>
     </section>
