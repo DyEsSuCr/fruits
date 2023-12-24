@@ -13,7 +13,7 @@ import { fruitsItems } from '@/const/fruits.items'
       <div class="w-full grid grid-cols-cards justify-center gap-10 my-12 mb-16">
         {
           fruitsItems.slice(6).map((item) => (
-            <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' />
+            <Card img={item.img} title={item.title} description={item.description} link={`/frutas/${item.title.toLocaleLowerCase()}`} bottomText='Ver receta' />
           ))
         }
       </div>

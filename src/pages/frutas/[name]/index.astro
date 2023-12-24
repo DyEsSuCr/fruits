@@ -34,7 +34,7 @@ const { name } = Astro.params
       </figure>
       
       <div class="w-full md:[50%] [&>div>p]:pb-[1.125rem]">
-        <Title type='h3' font='bold' text='Manzana roja' className='[font-size:_clamp(1.2em,10vw,1.625em)] pb-[1.125rem]' />
+        <Title type='h3' font='bold' text={String(name).charAt(0).toLocaleUpperCase() + String(name).slice(1)} className='[font-size:_clamp(1.2em,10vw,1.625em)] pb-[1.125rem]' />
         <Description title='Variedades comunes:'
         description='Algunas de las variedades de manzanas rojas más populares son la Red Delicious, Gala, McIntosh y Granny Smith.' />
         
