@@ -1,8 +1,8 @@
-import type { DiscoverItem } from '@/interface/interfaces'
+import type { Anchor } from '@/interface/interfaces'
 
 const link = 'javascript:void(0)'
 
-export const headerItem: DiscoverItem[] = [
+export const headerItem: Anchor[] = [
   {
     name: 'Frutas',
     link: '/frutas'

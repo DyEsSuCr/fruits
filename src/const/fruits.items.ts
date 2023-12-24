@@ -14,116 +14,100 @@ import peach from '@/images/peach.png?url'
 import strawberry from '@/images/strawberry.png?url'
 import grape from '@/images/grape.png?url'
 
-import type { Fruit } from '@/interface/interfaces'
+import type { Card } from '@/interface/interfaces'
 
 const description = 'But I must explain to you how all this mistaken idea of  will give you a complete account of the system'
-const bottomText = 'Ver ficha tecnica'
 const link = 'javascript:void(0)'
 
-export const fruitsItems: Fruit[] = [
+export const fruitsItems: Card[] = [
   {
     img: avocado,
     title: 'Avocado',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: carrot,
     title: 'Carrot',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: banana,
     title: 'Banana',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: eggplant,
     title: 'Eggplant',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: lemon,
     title: 'Lemon',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: tomato,
     title: 'Tomato',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: greenApple,
     title: 'Green Apple',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: apple,
     title: 'Apple',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: blueberry,
     title: 'Blueberry',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: watermelon,
     title: 'Watermelon',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: raspberries,
     title: 'Raspberries',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: orange,
     title: 'Orange',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: peach,
     title: 'Peach',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: strawberry,
     title: 'Strawberry',
     description,
-    link,
-    bottomText
+    link
   },
   {
     img: grape,
     title: 'Grape',
     description,
-    link,
-    bottomText
+    link
   }
 ]
