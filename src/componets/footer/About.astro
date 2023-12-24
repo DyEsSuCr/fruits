@@ -1,11 +1,32 @@
 ---
+import Icon from '@/icons/Icon.astro'
+import Facebook from '@/icons/Facebook.astro'
+import Twitter from '@/icons/Twitter.astro'
+import Instagram from '@/icons/Instagram.astro'
 import Title from "../Title.astro";
 
 ---
 
+ 
 <div class="flex flex-col">
-  <Title type='h4' font='semibold' text='Logo' className='text-3xl' />
-  <p>
-    Descubre la magia de las frutas y verduras frescas en un viaje lleno de sabores y beneficios para tu salud
-  </p>
+  <div class="max-w-96">
+    <Title type='h4' font='semibold' text='Logo' className='[font-size:_clamp(1.2em,10vw,1.875em)] pb-8' />
+    <p>
+      Descubre la magia de las frutas y verduras frescas en un viaje lleno de sabores y beneficios para tu salud
+    </p>
+
+    <div class="flex pt-16 gap-8 flex-wrap">
+      <Icon>
+        <Facebook />
+      </Icon>
+
+      <Icon>
+        <Twitter />
+      </Icon>
+
+      <Icon>
+        <Instagram />
+      </Icon>
+    </div>
+  </div>
 </div>
