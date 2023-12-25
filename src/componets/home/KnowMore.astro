@@ -1,0 +1,19 @@
+---
+import Section from "@/componets/Section.astro"
+import Card from "@/componets/Card.astro"
+import Buttom from "@/componets/Buttom.astro"
+
+import { fruitsItems } from "@/const/fruits.items"
+---
+
+<Section title='Conoce más' justify='center'>
+  <div class="w-full grid grid-cols-cards justify-center gap-10 my-12 mb-16">
+    {
+      fruitsItems.slice(0, 6).map((item) => (
+        <Card img={item.img} title={item.title} description={item.description} link={`/frutas/${item.title.toLocaleLowerCase()}`} bottomText="Ver ficha tecnica" />
+      ))
+    }
+  </div>
+
+  <Buttom text="Ver más" />
+</Section>

@@ -1,0 +1,19 @@
+---
+import Buttom from "@/componets/Buttom.astro";
+import Title from "@/componets/Title.astro";
+---
+
+<section class="my-24 shadow-xl py-8 px-4 md:py-32 md:px-24 bg-[url(/fruits.png)] bg-no-repeat bg-right bg-cover">
+  <div class="w-full lg:w-1/2 flex flex-col gap-16 text-center lg:text-start lg:max-w-[464px]">
+    <Title type='h3' font='bold' text='¡Descubre el sabor natural!' className='[font-size:_clamp(2.625em,10vw,3.75em)] text-green' />
+    <p class="[font-size:_clamp(.8em,10vw,1.25em]">
+      Platos deliciosos, noticias frescas y consejos útiles. Suscríbete para recibir contenido de calidad. ¡Únete y descubre el sabor natural!
+    </p>
+    <form class="flex flex-col md:flex-row items-center text-green relative md:max-w-max gap-4 md:gap-0">
+      <input type="email" class="bg-light-gray-3 py-4 pl-8 pr-20 rounded-md shadow-lg w-[80%] sm:w-full placeholder:text-light-gray-2" placeholder="Escribe tu correo">
+      <div class="md:absolute top-0 -right-[6.25rem]">
+        <Buttom text="enviar" className='rounded-lg [font-size:_clamp(.8em,10vw,1.25em] py-3 px-9 font-bold' />
+      </div>
+    </form>
+  </div>
+</section>

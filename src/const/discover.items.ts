@@ -5,11 +5,11 @@ const link = 'javascript:void(0)'
 export const discoverItem: Anchor[] = [
   {
     name: 'Home',
-    link
+    link: '/'
   },
   {
     name: 'Frutas',
-    link
+    link: '/frutas'
   },
   {
     name: 'Recetas',

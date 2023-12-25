@@ -1,6 +1,7 @@
 ---
 import Footer from '@/componets/footer/Footer.astro'
 import Header from '@/componets/header/Header.astro'
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   title: string
@@ -17,6 +18,7 @@ const { title, color } = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>fruits {title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
     <Header color={color} />

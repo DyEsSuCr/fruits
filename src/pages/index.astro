@@ -1,64 +1,23 @@
 ---
 import Layout from '@/layouts/Layout.astro'
-import Card from '@/componets/Card.astro'
-import Buttom from '@/componets/Buttom.astro'
-import Title from '@/componets/Title.astro'
-import Section from '@/componets/Section.astro'
-import Carousel from '@/componets/Carousel.astro'
 
-import { fruitsItems } from '@/const/fruits.items'
+import Carousel from '@/componets/home/Carousel.astro'
+import Discover from '@/componets/home/Discover.astro'
+import Practices from '@/componets/home/Practices.astro'
+import KnowMore from '@/componets/home/KnowMore.astro'
+import Hero from '@/componets/home/Hero.astro'
 ---
 
 <Layout title='home'>
-  <div class="min-h-[calc(100dvh+112px)] bg-[url(/hero.png)] bg-no-repeat bg-cover text-white flex items-center px-4 md:pl-[10%]">
-    <div class="lg:w-1/2 max-w-[690px] w-full">
-      <Title type='h2' font='bold' text='Frutas y verduras' className='[font-size:_clamp(2.625em,10vw,6em)] mb-14 leading-[98%]' />
-      <p class="text-2xl">
-        ¡Bienvenidos a nuestra página web dedicada a los tesoros naturales de la tierra! Descubre la magia de las frutas y verduras frescas en un viaje lleno de sabores y beneficios para tu salud. Explora información sobre prácticas de cultivo responsable y calidad de la UE, despierta tu creatividad con nuestras inspiradoras recetas.
-      </p>
-    </div>
-  </div>
+  <Hero />
 
   <div class="bg-dark-white rounded-br-[200px]">
-    <Section title='Conoce más' justify='center'>
-      <div class="w-full grid grid-cols-cards justify-center gap-10 my-12 mb-16">
-        {
-          fruitsItems.slice(0, 6).map((item) => (
-            <Card img={item.img} title={item.title} description={item.description} link={`/frutas/${item.title.toLocaleLowerCase()}`} bottomText="Ver ficha tecnica" />
-          ))
-        }
-      </div>
-
-      <Buttom text="Ver más" />
-    </Section>
+    <KnowMore />
   </div>
 
   <div class="max-w-[81.25rem] m-auto px-4 xl:px-0">
-    <section class="bg-[url(/big-banana.png)] bg-no-repeat bg-cover bg-center flex justify-end py-14 px-20 rounded-[35px] overflow-hidden text-white text-center lg:text-end my-16 relative before:absolute before:top-0 before:bottom-0 before:left-0 before:right-0 before:bg-sepia">
-      <div class="flex flex-col gap-8 w-full lg:w-1/2 relative items-center lg:items-end">
-        <Title type='h3' font='bold' text='Buenas practicas' className='[font-size:_clamp(1.5em,10vw,2rem)]' />
-        <p class="[font-size:_clamp(.8em,10vw,1.25em]">
-          Estas políticas se centran en proteger la salud de los consumidores, el bienestar de los animales, la sostenibilidad ambiental y la seguridad alimentaria.
-        </p>
-        <Buttom text='Ver más' />
-      </div>
-    </section>
-
+    <Practices />
     <Carousel />
-
-    <section class="my-24 shadow-xl py-8 px-4 md:py-32 md:px-24 bg-[url(/fruits.png)] bg-no-repeat bg-right bg-cover">
-      <div class="w-full lg:w-1/2 flex flex-col gap-16 text-center lg:text-start lg:max-w-[464px]">
-        <Title type='h3' font='bold' text='¡Descubre el sabor natural!' className='[font-size:_clamp(2.625em,10vw,3.75em)] text-green' />
-        <p class="[font-size:_clamp(.8em,10vw,1.25em]">
-          Platos deliciosos, noticias frescas y consejos útiles. Suscríbete para recibir contenido de calidad. ¡Únete y descubre el sabor natural!
-        </p>
-        <form class="flex flex-col md:flex-row items-center text-green relative md:max-w-max gap-4 md:gap-0">
-          <input type="email" class="bg-light-gray-3 py-4 pl-8 pr-20 rounded-md shadow-lg w-[80%] sm:w-full placeholder:text-light-gray-2" placeholder="Escribe tu correo">
-          <div class="md:absolute top-0 -right-[6.25rem]">
-            <Buttom text="enviar" className='rounded-lg [font-size:_clamp(.8em,10vw,1.25em] py-3 px-9 font-bold' />
-          </div>
-        </form>
-      </div>
-    </section>
+    <Discover />
   </div>
 </Layout>
