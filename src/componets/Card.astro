@@ -7,13 +7,14 @@ interface Props {
   description: string
   link: string
   bottomText: string
+  className?: string
 }
 
-const { description, img, link, title, bottomText } = Astro.props
+const { description, img, link, title, bottomText, className } = Astro.props
 ---
 
-<div class="rounded-[3rem] overflow-hidden shadow-xl">
-  <figure class="max-w-[40rem] max-h-[18.75rem] overflow-hidden">
+<div class=`rounded-[3rem] overflow-hidden shadow-xl ${className}`>
+  <figure class="max-w-[40rem] overflow-hidden max-h-56">
     <img class="w-full" src={img} alt={title}>
   </figure>
   <div class="flex flex-col p-8">

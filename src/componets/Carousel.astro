@@ -1,26 +1,64 @@
 ---
 import Row from "@/icons/Row.astro";
-import Section from "./Section.astro";
-import { foodItems } from "@/const/slider.items";
 import Card from "./Card.astro";
+import Title from "./Title.astro";
 
+import { foodItems } from "@/const/slider.items";
 ---
 
-<Section title='Recetas' justify='between'>
-  <nav slot="nav" class="text-green">
-    <button>
-      <Row />
-    </button>
-    <button class="rotate-180">
-      <Row />
-    </button>
-  </nav>
+<div  class="pt-16 px-4 lg:px-0">
+  <div class="swiper">
+    <div class='flex justify-between flex-wrap items-center w-full'>
+      <Title type='h3' font='bold' text='Recetas' className='[font-size:_clamp(2em,10vw,2.813em)]' />
+      <nav slot="nav" class="text-green">
+        <button class="prev">
+          <Row />
+        </button>
+        <button class="rotate-180 next">
+          <Row />
+        </button>
+      </nav>
+    </div>
 
-  <div class="w-full grid grid-cols-cards justify-center gap-10 pt-20">
-    {
-      foodItems.slice(0, 3).map((item) => (
-        <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' />
-      ))
-    }
+    <div class="swiper-wrapper pt-20 pb-12">
+      {
+        foodItems.slice(0, 4).map((item) => (
+            <div class="swiper-slide w-96 flex justify-center">
+              <Card img={item.img} title={item.title} description={item.description} link={item.link} bottomText='Ver receta' className="max-w-[25.063rem] relative z-30" />
+            </div>
+          ))
+        }
+    </div>
   </div>
-</Section>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script is:inline>
+  new Swiper('.swiper', {
+    spaceBetween: 42,
+    breakpoints: {
+      1280: {
+        slidesPerView: 3.2,
+      },
+      1024: {
+        slidesPerView: 2.5,
+      },
+      768: {
+        slidesPerView: 2.2,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      320: {
+        slidesPerView: 1,
+      },
+    },
+    slidesPerGroupAuto: true,
+    loop: true,
+    navigation: {
+      nextEl: ".next",
+      prevEl: ".prev",
+    }
+  })
+</script>
