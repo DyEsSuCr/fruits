@@ -5,7 +5,7 @@ import Agriculture from '@/icons/Agriculture.astro'
 import Compass from '@/icons/Compass.astro'
 import Plat from '@/icons/Plant.astro'
 import Sheet from '@/componets/Sheet.astro'
-import Description from '@/componets/Description.astro'
+import FruitInfo from '@/componets/FruitInfo.astro'
 
 const { name } = Astro.params
 ---
@@ -28,45 +28,6 @@ const { name } = Astro.params
       </Sheet>
     </div>
 
-    <div class="col-span-3 flex pb-16 gap-[8vw]">
-      <figure class="w-[70%] md:block hidden">
-        <img src="/big-apple.png" class="h-full object-cover">
-      </figure>
-      
-      <div class="w-full md:[50%] [&>div>p]:pb-[1.125rem]">
-        <Title type='h3' font='bold' text={String(name).charAt(0).toLocaleUpperCase() + String(name).slice(1)} className='[font-size:_clamp(1.2em,10vw,1.625em)] pb-[1.125rem]' />
-        <Description title='Variedades comunes:'
-        description='Algunas de las variedades de manzanas rojas más populares son la Red Delicious, Gala, McIntosh y Granny Smith.' />
-        
-        <aside class="pb-7 pt-2 flex flex-col items-end gap-4 [&>ul>li]:list-disc">
-          <ul class="w-[75%]">
-            <li>Forma: Redondeada o ligeramente ovalada.</li>
-            <li>Tamaño: Varía según la variedad, pero generalmente tienen un diámetro de aproximadamente 7-8 cm.</li>
-            <li>Peso: Depende de la variedad, pero en promedio pesan alrededor de 150-200 gramos.</li>
-            <li>Color: Piel roja brillante, aunque el tono puede variar desde un rojo intenso hasta un rojo más suave.</li>
-            <li>Textura: La piel es lisa y brillante.</li>
-            <li>Pulpa: Blanca o crema, jugosa y crujiente.</li>
-            <li>Sabor: Dulce con un ligero toque de acidez.</li>
-          </ul>
-
-          <ul class="w-[75%]">
-            <b>Valor nutricional por 100 gramos de manzana roja:</b>
-            <li>Calorías: Aproximadamente 52 kcal</li>
-            <li>Carbohidratos: 14 gramos</li>
-            <li>Fibra: 2.4 gramos</li>
-            <li>Azúcares: 10 gramos</li>
-            <li>Grasas: 0.2 gramos</li>
-            <li>Proteínas: 0.3 gramos</li>
-            <li>Vitaminas y minerales: Las manzanas rojas son una buena fuente de vitamina C y también contienen pequeñas cantidades de vitamina A, vitamina K, potasio y antioxidantes.</li>
-          </ul>
-        </aside>
-
-        <Description title='Almecenmiento:'
-        description='Las manzanas rojas se deben almacenar en un lugar fresco y seco, lejos de la luz solar directa. Pueden conservarse durante varias semanas en el refrigerador. Es importante tener en cuenta que esta ficha técnica es una descripción general y que pueden existir variaciones en las características dependiendo de la variedad específica de manzana roja.' />
-
-        <Description title='Usos culinarios:'
-        description='Las manzanas rojas son versátiles y se pueden consumir tanto crudas como cocidas. Son excelentes para comer solas como merienda o agregar a ensaladas, batidos y postres. También se utilizan en la preparación de compotas, mermeladas y jugos.' />
-      </div>
-    </div>
+    <FruitInfo nameFruit={String(name)} />
   </section>
 </Layout>
