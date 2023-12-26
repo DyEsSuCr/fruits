@@ -1,6 +1,6 @@
 ---
-import { discoverItem } from '../../const/discover.items'
-import Title from '../Title.astro';
+import { discoverItem } from '@/const/discover.items'
+import Title from '@/componets/Title.astro';
 ---
  
 <div class="flex flex-col items-start lg:items-center lg:border-x-2 border-light-gray-2">
@@ -10,7 +10,7 @@ import Title from '../Title.astro';
       {
         discoverItem.map((item) => (
           <li class="py-1">
-            <a href={item.link} class="text-light-gray">{item.name}</a>
+            <a href={item.link} class="text-light-gray hover:text-dark-gray">{item.name}</a>
           </li>
         ))
       }
